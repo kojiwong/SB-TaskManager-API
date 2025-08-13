@@ -17,3 +17,47 @@ This project was great for learning Spring Boot, Spring Data JPA, and PostgreSQL
 
 - RESTful API ready to integrate with any frontend
 
+
+## How to Run
+
+### Install Required Tools
+Make sure you have:
+- Java 17+
+
+- Maven
+
+- PostgreSQL
+
+### Check if versions are good
+```
+java -version
+mvn -version
+psql --version
+```
+
+### Create database in postgres
+```
+psql -U postgres
+CREATE DATABASE taskdb;
+\q
+```
+
+### Run the command to start server
+```
+mvn spring-boot:run
+```
+
+Server can be accessed at [localhost:8080](http://localhost:8080)
+
+
+### Create an example task
+```
+curl -X POST http://localhost:8080/api/tasks \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Buy groceries","description":"Milk, Eggs","dueDate":"2025-06-20"}'
+```
+
+### Get tasks
+```
+curl http://localhost:8080/api/tasks
+```
