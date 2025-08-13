@@ -51,6 +51,7 @@ Server can be accessed at [localhost:8080](http://localhost:8080)
 
 ### API endpoints
 | Method |	Endpoint |	Description |
+| ------ | --------- | ------------ |
 | GET |	/api/tasks |	Get all tasks |
 | GET |	/api/tasks/{id} |	Get task by ID |
 | POST |	/api/tasks |	Create new task |
